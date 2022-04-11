@@ -1,0 +1,30 @@
+﻿<Page x:Class="Maschinenpark.AccountAdder"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:Maschinenpark"
+      mc:Ignorable="d"
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="AccountAdder">
+
+    <Grid>
+        <ComboBox x:Name="cBoxBeruf" HorizontalAlignment="Left" Margin="752,511,0,0" VerticalAlignment="Top" Width="417" Height="26" FontSize="17" SelectedIndex="0" >
+            <ComboBoxItem Content="Beruf wählen..." FontSize="17"/>
+            <ComboBoxItem Content="Mechatroniker (MECH)" FontSize="17"/>
+            <ComboBoxItem Content="Werkzeugmechaniker (WZM)" FontSize="17"/>
+            <ComboBoxItem Content="Industriemechaniker (IM)" FontSize="17"/>
+            <ComboBoxItem Content="Zerspanungsmechaniker (ZM)" FontSize="17"/>
+            <ComboBoxItem Content="Andere" FontSize="17"/>
+        </ComboBox>
+        <Button x:Name="Add_Copy" Content="Back" HorizontalAlignment="Left" Margin="1078,666,0,0" Width="43" BorderThickness="1" RenderTransformOrigin="0.899,-0.076" Click="Back_click" Height="26" VerticalAlignment="Top" Cursor="Hand" FontSize="17" BorderBrush="#FF707070"/>
+        <Label x:Name="textBox_Tip" Foreground="Red" HorizontalContentAlignment="Center" Content="" HorizontalAlignment="Left" Margin="752,699,0,0" VerticalAlignment="Top" Width="417" Background="White" FontSize="14" RenderTransformOrigin="0.85,-0.242"/>
+        <Image Margin="840,237,0,587" HorizontalAlignment="Left" Source="logo.png" Width="259"/>
+        <TextBox x:Name="tbox_Vorname" HorizontalAlignment="Left" Height="26" Margin="752,542,0,0" TextWrapping="Wrap" FontSize="17" Text="Vorname..." VerticalAlignment="Top" Width="417" GotFocus="VornameFokus" KeyDown="EnterPressed" ToolTip="Vorname" LostFocus="tbox_Vorname_LostFocus"/>
+        <TextBox x:Name="tbox_Name" HorizontalAlignment="Left" Height="26" Margin="752,573,0,0" TextWrapping="Wrap" FontSize="17" Text="Name..." VerticalAlignment="Top" Width="417" GotFocus="nameFokus" KeyDown="EnterPressed" ToolTip="Name" LostFocus="tbox_Name_LostFocus"/>
+        <TextBox x:Name="textBox_UserName" HorizontalAlignment="Left" Width="417" Margin="752,604,0,0" TextWrapping="Wrap"  BorderThickness="1" AutomationProperties.IsColumnHeader="True" Height="26" VerticalAlignment="Top" FontSize="17" GotFocus="Fokus" Text="Benutzername..." KeyDown="EnterPressed" ToolTip="Benutzername" LostFocus="textBox_UserName_LostFocus"/>
+        <PasswordBox x:Name="pbox_Password" HorizontalAlignment="Left" Margin="752,635,0,0" VerticalAlignment="Top" Height="26" Width="417" Password="Password..." FontSize="15" GotFocus="pwFok" KeyDown="EnterPressed" ToolTip="Passwort" LostFocus="pbox_Password_LostFocus"/>
+        <PasswordBox x:Name="pbox_PasswordKontrolle" HorizontalAlignment="Left" Margin="752,666,0,0" VerticalAlignment="Top" Height="26" Width="321" Password="Password..." FontSize="15" GotFocus="pwFokus" KeyDown="EnterPressed" ToolTip="Passwort wiederholen" LostFocus="pbox_PasswordKontrolle_LostFocus"/>
+        <Button x:Name="Add" Content="Save" HorizontalAlignment="Left" Margin="1126,666,0,0" Width="43" BorderThickness="1" RenderTransformOrigin="0.899,-0.076" Click="Save_Click" Height="26" VerticalAlignment="Top" Cursor="Hand" FontSize="17" BorderBrush="#FF707070"/>
+    </Grid>
+</Page>
